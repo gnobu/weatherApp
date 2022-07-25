@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="app-wrap col1">
+            <header id="search-wrap">
+                <input type="search" name="search" id="search-box" placeholder="Enter a city...">
+                <ul id="search-results"></ul>
+            </header>
+            <main id="current-data" class="hidden">
+                <section class="location">
+                    <h2 class="city">City</h2>
+                    <p class="date">Weekday date Month Year</p>
+                </section>
+                <div class="current">
+                    <h1 class="temp">Temp<span>°c</span></h1>
+                    <img class='current-img' src="http://openweathermap.org/img/wn/10d@4x.png" alt="">
+                    <p class="feels">Feels like: <span>Temp°c</span></p>
+                    <p class="weather">Weather</p>
+                </div>
+            </main>
+        </div>
+        
+        <div class="app-wrap col2">
+            <section id="hourly" class="forecast hidden">
+                <!-- <div class="card">
+                    <h2 class="time">16:00</h2>
+                    <p class="weather">Sunny</p>
+                    <div class="temp">15°c</div>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <div>Feel like: 20°c</div>
+                </div>
+                <div class="card">
+                    <h2 class="time">16:00</h2>
+                    <p class="weather">Sunny</p>
+                    <div class="temp">15°c</div>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <div>Feel like: 20°c</div>
+                </div>
+                <div class="card">
+                    <h2 class="time">16:00</h2>
+                    <p class="weather">Sunny</p>
+                    <div class="temp">15°c</div>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <div>Feel like: 20°c</div>
+                </div>
+                <div class="card">
+                    <h2 class="time">16:00</h2>
+                    <p class="weather">Sunny</p>
+                    <div class="temp">15°c</div>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <div>Feel like: 20°c</div>
+                </div>
+                <div class="card">
+                    <h2 class="time">16:00</h2>
+                    <p class="weather">Sunny</p>
+                    <div class="temp">15°c</div>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <div>Feel like: 20°c</div>
+                </div> -->
+            </section>
+            
+            <section id="daily" class="forecast hidden">
+                <!-- <div class="card">
+                    <h2 class="date">Weekday</h2>
+                    <p class="weather">Sunny</p>
+                    <p class="temp">15°c</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <div class="low-hi">15°c / 30°c</div>
+                </div>
+                <div class="card">
+                    <h2 class="date">Weekday</h2>
+                    <p class="weather">Sunny</p>
+                    <p class="temp">15°c</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <div class="low-hi">15°c / 30°c</div>
+                </div>
+                <div class="card">
+                    <h2 class="date">Weekday</h2>
+                    <p class="weather">Sunny</p>
+                    <p class="temp">15°c</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <div class="low-hi">15°c / 30°c</div>
+                </div>
+                <div class="card">
+                    <h2 class="date">Weekday</h2>
+                    <p class="weather">Sunny</p>
+                    <p class="temp">15°c</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <div class="low-hi">15°c / 30°c</div>
+                </div>
+                <div class="card">
+                    <h2 class="date">Weekday</h2>
+                    <p class="weather">Sunny</p>
+                    <p class="temp">15°c</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <div class="low-hi">15°c / 30°c</div>
+                </div> -->
+            </section>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

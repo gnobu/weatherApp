@@ -1,0 +1,238 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+body {
+    margin: 0;
+    padding: 2rem .5rem 0;
+    min-height: 100vh;
+    font-family: 'montserrat', sans-serif;
+    font-size: calc(.4vw + .7rem);
+
+    background: url(weather.jpg), linear-gradient(180deg, #ccffff, #ffcccc);
+    background-size:cover;
+    /* background-position: top center; */
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    transition: 200ms ease-out;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vmin;
+    
+    width: 90%;
+    /* max-height: 90vh; */
+    /* max-width: 1000px; */
+    margin: 0 auto;
+}
+
+.app-wrap {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+    
+    width: 100%;
+    max-width: 550px;
+    padding: 5px;
+}
+
+header {
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 5% 1rem;
+}
+
+
+header input {
+    width: 100%;
+    max-width: 280px;
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border-bottom: 3px solid rgb(199, 98, 21);
+    background-color: rgba(255, 255, 255, 0.6);
+    
+    /* font-size: 20px; */
+    font-weight: 300;
+    transition: 200ms ease-out;
+}
+
+header input:focus {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+header ul {
+    position: absolute;
+    transform: translateY(75px);
+    z-index: 1;
+    
+    list-style-type: none;
+    border-radius: 5px;
+    
+    width: 90%;
+    max-width: 280px;
+    padding: 0 1rem;
+    margin: 0;
+
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000;
+    font-size: 1em;
+}
+
+.option:hover {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex: 1 1 25%;
+    padding: 1em 5% 2rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hidden {
+    /* visibility: hidden; */
+    
+    display: none;
+    height: 40px;
+}
+
+.location .city {
+    color: white;
+    /* font-size: 2rem; */
+    font-weight: 500;
+    margin:0 0 5px;
+}
+
+.location .date {
+    color: white;
+    /* font-size: 16px; */
+}
+
+.current .temp {
+    color: white;
+    font-size: 3em;
+    font-weight: 700;
+    margin: .5rem 0 0;
+    text-shadow: 2px 4px rgba(0, 0, 0, .6);
+}
+
+img {
+    width: 5rem;
+    /* height: 75%; */
+    /* object-fit: cover; */
+}
+
+.current-img {
+    width: 100px;
+}
+
+.current .temp span {
+    font-weight: 400;
+}
+
+.current .feels {
+    color: white;
+    /* font-size: 24px; */
+    font-weight: 500;
+    text-shadow: 0px 3px rgba(0, 0, 0, .4);
+    /* margin-bottom: 15px; */
+}
+
+.current .weather {
+    color: white;
+    /* font-size: 32px; */
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 0px 3px rgba(0, 0, 0, .4);
+}
+
+.col2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.forecast {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .5em;
+    gap: .5em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    background-color: rgba(255, 255, 255, .6);
+    padding: 10px;
+    border-radius: 5px;
+    
+    /* width: 100%; */
+}
+
+.card h2,p {
+    margin: 0 0 1em;
+}
+
+@media (min-width:650px) {
+    .container {
+        flex-direction: row;
+        width: fit-content;
+    }
+    
+    .col1 {
+        flex: 2 1;
+    }
+    
+    .col2 {
+        display: flex;
+        flex:2 1;
+        max-width: 1000px;
+    }
+    
+    .forecast {
+        /* flex-direction: row;
+        justify-content: space-between;
+        padding: 15px;*/
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .card {
+        flex-grow: 0;
+        /* width: 20%; */
+        /* grid-auto-columns: minmax(); */
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
